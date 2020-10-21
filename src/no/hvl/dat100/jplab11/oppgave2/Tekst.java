@@ -7,10 +7,6 @@ public class Tekst extends Innlegg {
 
 	private String tekst;
 	
-	/*public Tekst () {
-		
-	}*/
-	
 	public Tekst(int id, String bruker, String dato, String tekst) {
 		super(id, bruker, dato);
 		this.tekst = tekst;
@@ -22,7 +18,7 @@ public class Tekst extends Innlegg {
 	}
 	
 	public String getTekst() {
-		return this.tekst;
+		return tekst;
 	}
 
 	public void setTekst(String tekst) {
@@ -31,13 +27,12 @@ public class Tekst extends Innlegg {
 	
 	@Override
 	public String toString() {
-		return "TEKST\n" + super.toString() + this.tekst + "\n";
+		return "TEKST\n" + super.toString() + tekst + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 			
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return super.toHTML() + "\t\t<p>" + tekst + "</p>\n" + "\t\t<hr>\n";
 	}
 }

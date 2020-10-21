@@ -17,7 +17,7 @@ public class Bilde extends Tekst {
 	}
 	
 	public String getUrl() {
-		return this.url;
+		return url;
 	}
 
 	public void setUrl(String url) {
@@ -26,15 +26,16 @@ public class Bilde extends Tekst {
 	
 	@Override
 	public String toString() {
-		return "BILDE\n" + this.getId() + "\n" + this.getBruker() + "\n"
-				+ this.getDato() + "\n" + this.getLikes() + "\n" 
-				+ this.getTekst() + "\n" + this.url + "\n";
+		return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getTekst() + "\n" + url + "\n";
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		String text = "\t\t<h2>" + getBruker() + "@" + getDato() + " [" + getLikes() + "]</h2>\n";
+		text += "\t\t<p>" + getTekst() + "</p>\n";
+		text += "\t\t<iframe src='" + url + "' height=600 width=800></iframe><hr>\n";
+		return text;
 				
 	}
 }

@@ -25,7 +25,7 @@ public abstract class Innlegg {
 	}
 	
 	public String getBruker() {
-		return this.bruker;
+		return bruker;
 	}
 
 	public void setBruker(String bruker) {
@@ -33,7 +33,7 @@ public abstract class Innlegg {
 	}
 
 	public String getDato() {
-		return this.dato;
+		return dato;
 	}
 
 	public void setDato(String dato) {
@@ -41,30 +41,30 @@ public abstract class Innlegg {
 	}
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
 	public int getLikes() {
-		return this.likes;
+		return likes;
 	}
 	
 	public void doLike () {
-		this.likes++;
+		likes++;
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		return this.id == innlegg.getId();
+		return id == innlegg.getId();
 	}
 	
 	@Override
 	public String toString() {
-		return this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + this.likes + "\n";
+		return id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return "\t\t<h2>" + bruker + "@" + dato + " [" + likes + "]</h2>\n";
+			
 	}
 }

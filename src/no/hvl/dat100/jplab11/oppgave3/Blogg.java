@@ -16,16 +16,16 @@ public class Blogg {
 	}
 
 	public Blogg(int lengde) {
-		this.innleggtabell = new Innlegg[lengde];
-		this.nesteledig = 0;
+		innleggtabell = new Innlegg[lengde];
+		nesteledig = 0;
 	}
 
 	public int getAntall() {
-		return this.nesteledig;
+		return nesteledig;
 	}
 	
 	public Innlegg[] getSamling() {
-		return this.innleggtabell;
+		return innleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
